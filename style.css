@@ -1,5 +1,5 @@
 .container {
-  background-image: src('img/fundo.png');
+  background-image: src('fundo.png');
   background-size: cover;
   background-position: center;
   display: flex;
