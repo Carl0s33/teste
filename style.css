@@ -2,19 +2,22 @@
   background-image: src('img/fundo.png');
   background-size: cover;
   background-position: center;
-  
-  height: 200vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   
             
 }
 
 .titulo {
   text-align: center;
-  margin-top: 300px;
+  
 }
 .botoes{
             display: flex;
-  margin-top: 300px;
+  
             
 }
 #sim {
