@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pergunta Especial</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/style.css"> 
+
+   
+</head>
+<body>
+  
+    <div class="container">
+  <h1 class="titulo">Quer namorar comigo?</h1>
+  <div class="botoes">
+    <button id="sim">Sim</button>
+    <button id="nao">Não</button>
+  </div>
+</div>
+
+ 
+
+    <script>
+  const botaoNao = document.getElementById('nao');
+
+botaoNao.addEventListener('click', () => {
+    // Função para gerar uma posição aleatória dentro da viewport
+    function getRandomPosition() {
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        const buttonWidth = botaoNao.offsetWidth;
+        const buttonHeight = botaoNao.offsetHeight;
+
+        const randomX = Math.floor(Math.random() * (viewportWidth - buttonWidth));
+        const randomY = Math.floor(Math.random() * (viewportHeight - buttonHeight));
+
+        return { x: randomX, y: randomY };
+    }
+
+    // Obtém a nova posição aleatória
+    const { x, y } = getRandomPosition();
+
+    // Atualiza a posição do botão
+    botaoNao.style.left = `${x}px`;
+    botaoNao.style.top = `${y}px`;
+    botaoNao.style.position = 'absolute';
+  
+});
+
+        const botaoSim = document.getElementById('sim');
+        botaoSim.addEventListener('click', () => {
+            Swal.fire({
+                title: 'NOOOOSAA NEM ACREDITO QUE VOCE ACEITOU!',
+                text: 'CLICA OK AI AMOR TEM UMA SURPRESA', // Adicione um emoji no texto
+                icon: 'success'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'pagina-de-comemoracao.html';
+                  window.location.href = 'https://www.biblegateway.com/passage/?search=Cantares%20de%20Salom%C3%A2o%204&version=OL';
+
+                }
+              
+            });
+        });
+    </script>
+</body>
+</html>
